@@ -2,7 +2,7 @@ const inquirer = require("inquirer");
 const fs = require("fs");
 const generateMarkdown = require("./utils/generateMarkdown");
 
-const writeReadMe = util.promisify(fs.writeFile);
+const writeReadMe = util.promisify(fs.writeReadMe);
 
 function promptUser() {
   return inquirer.prompt([
