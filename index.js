@@ -38,7 +38,7 @@ function promptUser() {
     }
     {
       type: "input",
-      name: "Email",
+      name: "Github Email",
       message: "Enter yuor Github Email?"
     }      
   ]); 
@@ -47,18 +47,20 @@ function promptUser() {
 
 function generateReadme(answers) {
     return `
-        <h1 class="display-4">My project name is ${answers.Project-Title}</h1>
-        <p class="lead">The project description ${answers.Project-Description}.</p>
-        <p class="lead">Table of Contents ${answers.Table-of-contents}.</p>
-        <ul class="list-group">
-            <li class="list-group-item">The contrabuters ${answers.Contributers}</li>
-            <li class="list-group-item">My license is ${answers.License}</li>
-        </ul>    
-        <ul class="list-group">
-            <li class="list-group-item">My GitHub username is ${answers.github}</li>
-            <li class="list-group-item">Github Email: ${answers.Email}</li>
-        </ul>`;
-}
+        # This is an <h1> tag ${answers.Project-Title}</h1>
+
+        #### This is an <h4> tag ${answers.Project-Description}.</h4>
+
+        #### This is an <h4> tag ${answers.Table-of-contents}.</h4>
+
+        * Item 1<li class="list-group-item">The contrabuters ${answers.Contributers}</li>
+
+        * Item 2<li class="list-group-item">My license is ${answers.License}</li>
+
+        * Item 1<li class="list-group-item">My GitHub username is ${answers.github}</li>
+      
+        * Item 2<li class="list-group-item">Github Email: ${answers.Github-Email}</li>;
+`}
 
 
 promptuser()
@@ -73,3 +75,4 @@ promptuser()
     .catch(function(err) {
         console.log(err);
     });
+
