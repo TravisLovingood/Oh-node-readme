@@ -1,8 +1,20 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const generateMarkdown = require("./utils/generateMarkdown");
+const simpleGit = require('simple-git')(answers);
 
 const writeReadMe = util.promisify(fs.writeReadMe);
+
+// Wrong place for this.kk
+//     const util = require('util');
+// const fs = require('fs');
+
+// const stat = util.promisify(fs.stat);
+// stat('.').then((stats) => {
+//   // Do something with `stats`
+// }).catch((error) => {
+//   // Handle the error.
+// });
 
 function promptUser() {
   return inquirer.prompt([
@@ -25,17 +37,17 @@ function promptUser() {
       type: "input",
       name: "Contributors",
       message: "List Contributors?"
-    }
+    },
     {
       type: "input",
       name: "License",
       message: "License?"
-    }
+    },
     {
       type: "input",
       name: "github",
       message: "Enter your GitHub Username"
-    }
+    },
     {
       type: "input",
       name: "Github Email",
@@ -47,25 +59,25 @@ function promptUser() {
 
 function generateReadme(answers) {
     return `
-        # This is an <h1> tag ${answers.Project-Title}</h1>
+        # ${answers.Project-Title}
 
-        #### This is an <h4> tag ${answers.Project-Description}.</h4>
+        ####${answers.Project-Description}.</h4>
 
-        #### This is an <h4> tag ${answers.Table-of-contents}.</h4>
+        ####${answers.Table-of-contents}.</h4>
 
-        * Item 1<li class="list-group-item">The contrabuters ${answers.Contributers}</li>
+        * ${answers.Contributers}</li>
 
-        * Item 2<li class="list-group-item">My license is ${answers.License}</li>
+        * ${answers.License}</li>
 
-        * Item 1<li class="list-group-item">My GitHub username is ${answers.github}</li>
+        * ${answers.github}</li>
       
-        * Item 2<li class="list-group-item">Github Email: ${answers.Github-Email}</li>;
+        * ${answers.Github-Email}</li>;
 `}
 
 
 promptuser()
     .then(function(answers) {
-        const readme = generateReadMe(awnsers)
+        const readme = generateReadMe(answers)
 
         return writeReadMe("README.md")
     })
