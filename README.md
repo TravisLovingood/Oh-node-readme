@@ -1,6 +1,6 @@
 # Oh-node-readme [![NPM version](https://badge.fury.io/js/Oh-node-readme.svg)](https://npmjs.org/package/Oh-node-readme) [![Build Status](https://travis-ci.org/TravisLovingood/Oh-node-readme.svg?branch=master)](https://travis-ci.org/TravisLovingood/Oh-node-readme)
 
-> Generating a readme
+> um
 
 ## Installation
 
@@ -17,4 +17,4 @@ ohNodeReadme();
 
 ## License
 
-MIT © [Travis Lovingood](www)
+MIT © [um](um)

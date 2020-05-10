@@ -5,17 +5,6 @@ const simpleGit = require('simple-git')(answers);
 
 const writeReadMe = util.promisify(fs.writeReadMe);
 
-// Wrong place for this.kk
-//     const util = require('util');
-// const fs = require('fs');
-
-// const stat = util.promisify(fs.stat);
-// stat('.').then((stats) => {
-//   // Do something with `stats`
-// }).catch((error) => {
-//   // Handle the error.
-// });
-
 function promptUser() {
   return inquirer.prompt([
     {
@@ -29,7 +18,7 @@ function promptUser() {
       message: "What is your project name?"
     },
     {
-      type: "inpu0t",
+      type: "input",
       name: "Table of contents",
       message: "Add a table of contents"
     },
@@ -51,7 +40,7 @@ function promptUser() {
     {
       type: "input",
       name: "Github Email",
-      message: "Enter yuor Github Email?"
+      message: "Enter your Github Email?"
     }      
   ]); 
 }
@@ -61,17 +50,17 @@ function generateReadme(answers) {
     return `
         # ${answers.Project-Title}
 
-        ####${answers.Project-Description}.</h4>
+        ####${answers.Project-Description}
 
-        ####${answers.Table-of-contents}.</h4>
+        ####${answers.Table-of-contents}
 
-        * ${answers.Contributers}</li>
+        * ${answers.Contributers}
 
-        * ${answers.License}</li>
+        * ${answers.License}
 
-        * ${answers.github}</li>
+        * ${answers.github}
       
-        * ${answers.Github-Email}</li>;
+        * ${answers.Github-Email}
 `}
 
 
