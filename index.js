@@ -1,25 +1,26 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const generateMarkdown = require("./utils/generateMarkdown");
+const answers = undefined
 const simpleGit = require('simple-git')(answers);
-
-const writeReadMe = util.promisify(fs.writeReadMe);
+const util = require("util");
+const writeReadMe = util.promisify(fs.writeFile);
 
 function promptUser() {
   return inquirer.prompt([
     {
       type: "input",
-      name: "Project Title",
+      name: "ProjectTitle",
       message: "What is your project title?"
     },
     {
       type: "input",
-      name: "Project Description",
+      name: "ProjectDescription",
       message: "What is your project name?"
     },
     {
       type: "input",
-      name: "Table of contents",
+      name: "TableOfContents",
       message: "Add a table of contents"
     },
     {
@@ -39,20 +40,20 @@ function promptUser() {
     },
     {
       type: "input",
-      name: "Github Email",
+      name: "GithubEmail",
       message: "Enter your Github Email?"
     }      
   ]); 
 }
 
 
-function generateReadme(answers) {
+function generateReadMe(answers) {
     return `
-        # ${answers.Project-Title}
+        # ${answers.ProjectTitle}
 
-        ####${answers.Project-Description}
+        ####${answers.ProjectDescription}
 
-        ####${answers.Table-of-contents}
+        ####${answers.TableOfContents}
 
         * ${answers.Contributers}
 
@@ -60,15 +61,15 @@ function generateReadme(answers) {
 
         * ${answers.github}
       
-        * ${answers.Github-Email}
+        * ${answers.GithubEmail}
 `}
 
 
-promptuser()
+promptUser()
     .then(function(answers) {
-        const readme = generateReadMe(answers)
-
-        return writeReadMe("README.md")
+        // const readme = generateReadMe(answers)
+        const readme = "string todo"
+        return writeFile("README.md")
     })
     .then(function() {
         console.log("Success!");    
