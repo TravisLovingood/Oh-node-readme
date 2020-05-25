@@ -67,14 +67,18 @@ function generateReadMe(answers) {
 
 promptUser()
     .then(function(answers) {
-        // const readme = generateReadMe(answers)
+
         const readme = "string todo"
-        return writeFile("README.md")
+
     })
     .then(function() {
-        console.log("Success!");    
-    })
-    .catch(function(err) {
-        console.log(err);
-    });
 
+      fs.writeFile("log.txt","AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",  function(err) {
+// process.argv[2],
+        console.log("Success!");
+              if (err) {
+        return console.log(err);
+              }
+      });
+
+    });
