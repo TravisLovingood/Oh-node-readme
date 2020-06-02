@@ -5,6 +5,7 @@ const answers = undefined
 const simpleGit = require('simple-git')(answers);
 const util = require("util");
 const writeReadMe = util.promisify(fs.writeFile);
+const path= require("path")
 
 function promptUser() {
   return inquirer.prompt([
@@ -65,20 +66,35 @@ function generateReadMe(answers) {
 `}
 
 
+// promptUser()
+//     .then(function(answers) {
+//       const readme = generateReadMe(answers);
+
+//       return writeFileAsync("index.html", html);
+//     })
+
+//     .then(function() {
+
+//       fs.writeFile("log.txt","Yeah Good Job I Think!?", 
+//        function(err) 
+//       {
+//         console.log("Success!");
+//               if (err) {
+//         return console.log(err);
+//         }
+//       });
+//     });
+
 promptUser()
-    .then(function(answers) {
-
-        const readme = "string todo"
-
+  .then(function init() {
+    inquirer.prompt
+    (answers).then((inquirerResponses)=>{
+      fs.writeFile("README.md", generateMarkdown({ ...inquirerResponses}))
     })
-    .then(function() {
-
-      fs.writeFile("log.txt","AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",  function(err) {
-// process.argv[2],
-        console.log("Success!");
+  .then(function() {
+    console.log("Success!");
               if (err) {
         return console.log(err);
-              }
+        }
       });
-
     });
