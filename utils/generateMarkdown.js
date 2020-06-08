@@ -1,11 +1,11 @@
-function generateProjectUrl(github, title) {
-  const kebabCaseTitle = title.toLowerCase().split(" ").join("-");
+function generateProjectUrl(github, ProjectTitle) {
+  const kebabCaseTitle = ProjectTitle.toLowerCase().split(" ").join("-");
   return `https://github.com/${github}/${kebabCaseTitle}`;
 }
 
-function renderLicenseBadge(license, github, title) {
+function renderLicenseBadge(license, github, ProjectTitle) {
   if (license !== "None") {
-    return `[![GitHub license](https://img.shields.io/badge/license-${license}-blue.svg)](${generateProjectUrl(github, title)})`
+    return `[![GitHub License](https://img.shields.io/badge/License-${license}-blue.svg)](${generateProjectUrl(github, ProjectTitle)})`
   }
   return ''
 }
@@ -15,16 +15,17 @@ function renderLicenseSection(license) {
     return (
       `## License
 
-This project is licensed under the ${license} license.`
+This project is licensed under the ${license} License.`
     )
   }
   return ''
 }
 
-function generateMarkdown(data) {
+function generateMarkdown(data) { 
+  console.log(data)
   return `
-# ${data.title}
-${renderLicenseBadge(data.license, data.github, data.title)}
+# ${data.ProjectTitle}
+${renderLicenseBadge(data.license, data.github, data.ProjectTitle)}
 
 ## Description
 

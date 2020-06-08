@@ -1,11 +1,10 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const generateMarkdown = require("./utils/generateMarkdown");
-const answers = undefined
-const simpleGit = require('simple-git')(answers);
 const util = require("util");
-const writeReadMe = util.promisify(fs.writeFile);
 const path= require("path")
+const writeFile = util.promisify(fs.writeFile);
+
 
 function promptUser() {
   return inquirer.prompt([
@@ -64,37 +63,18 @@ function generateReadMe(answers) {
       
         * ${answers.GithubEmail}
 `}
-
-
-// promptUser()
-//     .then(function(answers) {
-//       const readme = generateReadMe(answers);
-
-//       return writeFileAsync("index.html", html);
-//     })
-
-//     .then(function() {
-
-//       fs.writeFile("log.txt","Yeah Good Job I Think!?", 
-//        function(err) 
-//       {
-//         console.log("Success!");
-//               if (err) {
-//         return console.log(err);
-//         }
-//       });
-//     });
-
-promptUser()
-  .then(function init() {
-    inquirer.prompt
-    (answers).then((inquirerResponses)=>{
-      fs.writeFile("README.md", generateMarkdown({ ...inquirerResponses}))
+  function init() {
+   promptUser().then((inquirerResponses)=>{
+        writeFile("README.md", generateMarkdown({ ...inquirerResponses}))
     })
-  .then(function() {
-    console.log("Success!");
-              if (err) {
-        return console.log(err);
-        }
-      });
-    });
+  
+    .then(function(){
+        console.log("success")
+    })
+
+    .catch(function(err){
+        console.log(err)
+    })
+
+}
+init();
