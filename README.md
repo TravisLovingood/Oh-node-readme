@@ -1,6 +1,6 @@
 
-# Oh node read me
-[![GitHub License](https://img.shields.io/badge/License-undefined-blue.svg)](https://github.com/https://github.com/TravisLovingood/oh-node-read-me)
+# Get Readme
+[![GitHub License](https://img.shields.io/badge/License-y-blue.svg)](https://github.com/https://github.com/TravisLovingood/Oh-node-readme/get-readme)
 
 ## Description
 
@@ -34,7 +34,7 @@ undefined
 
 ## License
 
-This project is licensed under the undefined License.
+This project is licensed under the y License.
   
 ## Contributing
 
@@ -52,5 +52,5 @@ undefined
 
 <img src="undefined" alt="avatar" style="border-radius: 16px" width="30" />
 
-If you have any questions about the repo, open an issue or contact [https://github.com/TravisLovingood](undefined) directly at undefined.
+If you have any questions about the repo, open an issue or contact [https://github.com/TravisLovingood/Oh-node-readme](undefined) directly at undefined.
 

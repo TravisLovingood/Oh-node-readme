@@ -30,8 +30,8 @@ function promptUser() {
     },
     {
       type: "input",
-      name: "License",
-      message: "License?"
+      name: "license",
+      message: "license?"
     },
     {
       type: "input",
@@ -57,7 +57,7 @@ function generateReadMe(answers) {
 
         * ${answers.Contributers}
 
-        * ${answers.License}
+        * ${answers.license}
 
         * ${answers.github}
       
