@@ -1,14 +1,16 @@
 
-# Get Readme
-[![GitHub License](https://img.shields.io/badge/License-y-blue.svg)](https://github.com/https://github.com/TravisLovingood/Oh-node-readme/get-readme)
+# Oh Node ReadMe
+[![GitHub License](https://img.shields.io/badge/License-Oh Yeah-blue.svg)](https://github.com//oh-node-readme)
+![readMe Image](./pics/ohNode.PNG)
 
 ## Description
 
-undefined
+To give a project creator more time to work on a project, I have made a command-line application that will allow for  
+easy generation of a project README. This README will be populated with information about the app like how to use it, how to install it, how to report
+issues, and how to make contributions
 
 ## Table of Contents 
 
-* [Installation](#installation)
 
 * [Usage](#usage)
 
@@ -16,41 +18,27 @@ undefined
 
 * [Contributing](#contributing)
 
-* [Tests](#tests)
 
 * [Questions](#questions)
 
-## Installation
-
-To install necessary dependencies, run the following command:
-
-```
-undefined
-```
 
 ## Usage
 
-undefined
+```
+Open a new terminal,
+
+run node index.js.
+```
 
 ## License
 
-This project is licensed under the y License.
+This project is licensed under the Oh Yeah License.
   
 ## Contributing
 
-undefined
-
-## Tests
-
-To run tests, run the following command:
-
-```
-undefined
-```
+Travis Lovingood
 
 ## Questions
 
-<img src="undefined" alt="avatar" style="border-radius: 16px" width="30" />
-
-If you have any questions about the repo, open an issue or contact [https://github.com/TravisLovingood/Oh-node-readme](undefined) directly at undefined.
+If you have any questions about the repo, open an issue or contact [Oh-node-readme](https://github.com/TravisLovingood/Oh-node-readme) directly at undefined.
 
