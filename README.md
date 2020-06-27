@@ -1,6 +1,6 @@
 
 # Oh Node ReadMe
-[![GitHub License](https://img.shields.io/badge/License-Oh Yeah-blue.svg)](https://github.com//oh-node-readme)
+
 ![readMe Image](./pics/ohNode.PNG)
 
 ## Description
