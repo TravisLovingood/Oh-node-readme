@@ -25,9 +25,9 @@ issues, and how to make contributions
 ## Usage
 
 ```
-Open a new terminal,
+In your terminal enter npm install.
 
-run node index.js.
+Then enter npm start.
 ```
 
 ## License
@@ -41,4 +41,3 @@ Travis Lovingood
 ## Questions
 
 If you have any questions about the repo, open an issue or contact [Oh-node-readme](https://github.com/TravisLovingood/Oh-node-readme) directly at undefined.
-
